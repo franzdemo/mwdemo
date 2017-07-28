@@ -1,6 +1,7 @@
 module.exports = function(list,target) {
     list.forEach(function(item) {
-        target = target.replace(item, 'XXXX');
+        var searchString = new RegExp(item, 'g');
+        target = target.replace(searchString, 'XXXX');
     });
     return target;
 }
