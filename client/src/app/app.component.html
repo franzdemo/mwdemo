@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+  <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)" (ngModel)="Docs">
+    <div>
+      <label>Censored Keywords</label>
+      <div>
+        <textarea formControlName="keywordsToRedact"></textarea>
+      </div>
+    </div>
+    <div>
+      <label>Document to Censor</label>
+      <div>
+        <textarea formControlName="originalDocument"></textarea>
+      </div>
+    </div>
+    <div>
+      <button type="submit">Censor the Document</button>
+    </div>
+    <div>
+      <label>Processed Document</label>
+      <div>
+        <textarea formControlName="processedDocument"></textarea>
+      </div>
+    </div>
+  </form>
+</h1>
